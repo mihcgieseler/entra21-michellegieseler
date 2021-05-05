@@ -1,0 +1,123 @@
+Exercício 1
+<body>
+<script>
+console.log("Oi, meu nome é Michelle!")
+</script>
+</body>
+
+Exercício 2
+<body>
+<script>
+console.log("1) Cadastrar funcionário\n2) Listar funcionários\n3) Editar funcionário\n4 )Deletar funcionário\n5) Sair")
+</script>
+</body>
+
+Exercício 3
+<script>
+let nome = "João"
+let admin = nome
+console.log(nome)
+</script>
+
+Exercício 4
+<script>
+let meuNome = "Michelle"
+let idade = 26
+let peso = 90
+let altura = 1.78
+let telefoneDeUsuario = 47992789754
+console.log(`Nome: ${meuNome}`)
+console.log(`Idade: ${idade}`)
+console.log(`Peso: ${peso}`)
+console.log(`Altura ${altura}`)
+console.log(`Telefone ${telefoneDeUsuario}`)
+</script>
+
+Exercício 5
+let tituloDoLivro = "Harry Potter e as Relíquias da Morte"
+let edicao = "1ª"
+let autor = "J. K. Rowling"
+let dataDaPublicacao = 2015
+console.log(`Título: ${tituloDoLivro}`)
+console.log(`Edição: ${edicao}`)
+console.log(`Autor: ${autor}`)
+console.log(`Data da Publicação: ${dataDaPublicacao}`)
+
+Exercício 6
+let dataDeNascimento = 1995
+let quantidadeDeFilhos = 0
+let usuario = "Michelle"
+
+Exercício 7
+console.log(`Olá ${1}`) // Olá 1
+console.log(`Olá ${"nome"}`) // Olá nome
+alert(`Olá ${nome}`) // Olá João
+
+Exercício 8
+121
+
+Exercício 9
+4 5 
+
+Exercício 10
+A) "" + 1 + 0 // "10"
+B) "" - 1 + 0 // -1
+C) 6 / "3" // 2
+D) "2" * "3" // 6
+E) 4 + 5 + "px" // 9px
+F) "$" + 4 + 5 // $45
+G) "4" - 2 // 2
+
+Exercício 11
+<script>
+let altura = Number(prompt("Digite a altura"))
+let largura = Number(prompt("Digite a largura"))
+let perimetro = altura + largura
+let area = altura * largura
+console.log(perimetro, area)
+</script>
+
+Exercício 12
+<script>
+let numero1 = Number(prompt("Digite o primeiro número"))
+let numero2 = Number(prompt("Digite o segundo número"))
+let resultado = numero1 + numero2
+console.log(resultado)
+</script>
+
+Exercício 13
+<script>
+let nota1 = Number(prompt("Digite a primeira nota"))
+let nota2 = Number(prompt("Digite a segunda nota"))
+let resultado = (nota1 + nota2)/2
+console.log(`A média entre ${nota1} e ${notaB} é: ${resultado.toFixed}`)
+</script>
+
+Exercício 14
+<script>
+let numero1 = Number(prompt("Digite o primeiro número"))
+let numero2 = Number(prompt("Digite o segundo número"))
+let numero3 = Number(prompt("Digite o terceiro número"))
+let resultadoDoNumero1 = numero1 ** 2
+let resultadoDoNumero2 = numero2 ** 2
+let resultadoDoNumero3 = numero3 ** 2
+console.log(`O número ${numero1} ao quadrado é ${resultadoDoNumero1}\n O numero ${numero2} ao quadrado é ${resultadoDoNumero2}\n O número ${numero3} ao quadrado é ${resultadoDoNumero3}`)
+</script>
+
+Exercício 15
+<script>
+let letraA = 10
+let letraB = 20
+let aux = letraA
+console.log (letraA, letraB)
+letraA = letraB
+letraB = aux
+console.log(letraA, letraB)
+</script>
+
+Exercício 16
+<script>
+let quantidadeDeMeses = Number(prompt("Quantidade de meses"))
+let quantidadeDeDias = quantidadeDeMeses * 30
+alert(quantidadeDeDias)
+</script>

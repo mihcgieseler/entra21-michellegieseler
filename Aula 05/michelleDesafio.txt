@@ -1,0 +1,44 @@
+Exercício 1
+<script>
+let numeroDoUsuario = Number(prompt("Digite um número"))
+let antecessor = numeroDoUsuario - 1 
+let sucessor = numeroDoUsuario + 1
+console.log(antecessor, numeroDoUsuario, sucessor)
+</script>
+
+Exercício 2
+<script>
+let raio = Number(prompt("Digite o raio da esfera"))
+const pi = 3.14159
+let volume = 4/3 * pi * (raio ** 3)
+alert(volume.toFixed(2)) 
+</script>
+
+Exercício 3
+<script>
+let base = 10
+let altura = 20
+let area = base * altura / 2
+alert(area)
+
+</script>
+
+Exercício 4
+<script>
+let valorDoProduto = Number(prompt("Valor do produto"))
+let desconto = Number(prompt("Qual a porcentagem de desconto?"))
+let valorDoDesconto = (valorDoProduto / 100) * desconto
+let valorComDesconto = valorDoProduto - valorDoDesconto     
+alert(`Valor do produto ${valorComDesconto} , Valor do desconto ${valorDoDesconto}`) 
+</script>
+
+Exercício 5
+<script>
+let nome = String(prompt("Qual é seu nome?"))
+let salario = Number(prompt("Qual seu salário?"))
+let vendas = Number(prompt("Quanto você vendeu esse mês?"))
+const comissao = 15
+let valorDaComissao = (vendas / 100) * comissao
+let salarioInteiro = valorDaComissao + salario     
+alert(`Valor total ${salarioInteiro.toFixed(2)}`) 
+</script>

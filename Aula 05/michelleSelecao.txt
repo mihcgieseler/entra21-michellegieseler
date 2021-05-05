@@ -1,0 +1,71 @@
+Exercício 1
+console.log(!10) // false
+console.log(!!"String") // true
+console.log(!!2.3) // true
+console.log(Boolean(null)) // false
+
+Exercício 2
+console.log(10 > 2) // true
+console.log(5 >= "5") // true
+console.log(5 >== "5") // Erro de Sintaxe
+console.log("apple" > "pineapple") // false
+console.log("2" > "12") // true
+console.log(undefined == null) // true
+console.log(undefined === null) // false
+console.log(null == "\n0\n") // false
+console.log(null === +"\n0\n") // false
+
+Exercício 3
+<script>
+let valor = Number(prompt("Digite um valor"))
+    
+if (valor > 10) {
+alert("O valor é maior do que 10, programa finalizando...")
+}
+else {
+alert("Programa finalizando...")
+}
+      
+</script>
+
+
+Exercício 4
+<script>
+let numero = Number(prompt("Digite um número"))
+if(numero%2==0){
+let numeroPar = numero / 2
+alert(`Resultado da divisão por 2 ${numeroPar}. Programa finalizando...`)
+}
+
+else{
+alert("Programa finalizando...")
+}
+</script>
+
+Exercício 5
+<script>
+let numero = Number(prompt("Digite um número"))
+if(numero%2==0){
+alert("O número é par")
+}
+
+else{
+alert("O número é ímpar")
+}
+</script>
+
+Exercício 6
+<script>
+let numero = Number(prompt("Digite um número"))
+if(numero>20){
+if(numero<90){
+alert("O número está na faixa entre 20 e 90")
+}
+else{
+alert("O número não está na faixa")
+}
+}
+else{
+alert("O número não está na faixa")
+}
+</script>
