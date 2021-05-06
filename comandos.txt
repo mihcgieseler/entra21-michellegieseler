@@ -1,0 +1,8 @@
+Git init - Inicializar Git Bash
+Ctrl + Shift + I abre terminal no Visual code
+Git add . - adicionar os arquivos na área de staged
+Git status - verificar o status do repositório
+Git commit -m "comando aqui" - última etapa do repositório local
+Git log - configurar usuário que está usando a máquina
+Git config --global user.name "nome do usuário" - configurar com o nome do usuário
+git restore --staged nomedoarquivoprasalvar.html

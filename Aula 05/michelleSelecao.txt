@@ -192,3 +192,128 @@ alert("Não precisa votar")
 
 
 Exercício 17
+    <script>
+        let numero1 = Number(prompt("Digite o primeiro número"))
+        let numero2 = Number(prompt("Digite o segundo número"))
+        let numero3 = Number(prompt("Digite o terceiro número"))
+        if (numero1 >= numero2 && numero1 >= numero3){
+            if (numero2 >= numero3){
+                alert(`A ordem dos números é ${numero1}, ${numero2}, ${numero3}`)
+           }
+           else{
+               alert(`A ordem dos números é ${numero1}, ${numero3}, ${numero2}`)
+           }
+        }
+        else if (numero2 >= numero1 && numero2 >= numero3){
+            if (numero1 >= numero3){
+                alert(`A ordem dos números é ${numero2}, ${numero1}, ${numero3}`)
+           }
+           else{
+               alert(`A ordem dos números é ${numero2}, ${numero3}, ${numero1}`)
+           }
+        }
+        else{
+            if (numero2 >= numero1){
+                alert(`A ordem dos números é ${numero3}, ${numero2}, ${numero1}`)
+           }
+           else{
+               alert(`A ordem dos números é ${numero3}, ${numero1}, ${numero2}`)
+           }
+        }
+            
+        
+    </script>
+
+
+    Exercício 18
+        <script>
+let numero = Number(prompt("Qual a sua idade?"))
+if(numero>18 && numero<67){
+alert("Você pode doar sangue!")
+}
+else{
+alert("Você não pode doar sangue!")}
+    </script>
+
+    Exercício 19
+        <script>
+        let dia = Number(prompt("Digite um número de 1 a 7"))
+        switch (dia) {
+            case dia = 1:
+            alert("Domingo")
+            break;
+            case dia = 2:
+            alert("Segunda-feira")
+            break;
+            case dia = 3:
+            alert("Terça-feira")
+            break;
+            case dia = 4:
+            alert("Quarta-feira")
+            break;
+            case dia = 5:
+            alert("Quinta-feira")
+            break;
+            case dia = 6: 
+            alert("Sexta-feira")
+            break;
+            default: 
+            alert("Sábado")}
+    </script>
+
+
+    Exercício 20
+        <script>
+        let mes = Number(prompt("Digite um número de 1 a 12"))
+        switch (mes) {
+            case 1:
+            alert("Janeiro")
+            break;
+            case 2:
+            alert("Fevereiro")
+            break;
+            case 3:
+            alert("Março")
+            break;
+            case 4:
+            alert("Abril")
+            break;
+            case 5:
+            alert("Maio")
+            break;
+            case 6: 
+            alert("Junho")
+            break;
+            case 7:
+            alert("Julho")
+            break;
+            case 8:
+            alert("Agosto")
+            break;
+            case 9:
+            alert("Setembro")
+            break;
+            case 10:
+            alert("Outubro")
+            break;
+            case 11:
+            alert("Novembro")
+            break;
+            default: 
+            alert("Dezembro")}
+    </script>
+
+
+    Exercício 21
+    <script>
+        let horario = prompt("Em que turno você estuda?\nConsidere:\nM - matutino\nV - vespertino\nN - noturno").toUpperCase()
+        switch (horario) {
+            case "M":
+            alert("Bom dia!")
+            break;
+            case "V":
+            alert("Boa tarde!")
+            break;
+            case "N":
+            alert("Boa noite")}
+    </script>
