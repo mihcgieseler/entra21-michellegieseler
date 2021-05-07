@@ -34,11 +34,11 @@ Exercício 4
 let numero = Number(prompt("Digite um número"))
 if(numero%2==0){
 let numeroPar = numero / 2
-alert(`Resultado da divisão por 2 ${numeroPar}. Programa finalizando...`)
+alert(`Resultado da divisão por 2 é ${numeroPar}. Programa finalizando...`)
 }
 
 else{
-alert("Programa finalizando...")
+alert("Programa finalizando...") 
 }
 </script>
 
