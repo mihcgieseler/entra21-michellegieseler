@@ -7,43 +7,17 @@
 </head>
 <body>
     <script>
-        let mes = Number(prompt("Digite um número de 1 a 12"))
-        switch (mes) {
-            case 1:
-            alert("Janeiro")
-            break;
-            case 2:
-            alert("Fevereiro")
-            break;
-            case 3:
-            alert("Março")
-            break;
-            case 4:
-            alert("Abril")
-            break;
-            case 5:
-            alert("Maio")
-            break;
-            case 6: 
-            alert("Junho")
-            break;
-            case 7:
-            alert("Julho")
-            break;
-            case 8:
-            alert("Agosto")
-            break;
-            case 9:
-            alert("Setembro")
-            break;
-            case 10:
-            alert("Outubro")
-            break;
-            case 11:
-            alert("Novembro")
-            break;
-            default: 
-            alert("Dezembro")}
-    </script>
+        let idade = Number(prompt("Qual é a sua idade?"))
+        if (idade < 65 && idade >= 18){
+        alert("Voto obrigatório")
+        }
+        else if (idade < 18 && idade > 16){
+        alert("Voto opcional")
+        }
+        else {
+        alert("Não precisa votar")
+        }
+            
+        </script>
 </body>
 </html>

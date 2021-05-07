@@ -181,7 +181,7 @@ let idade = Number(prompt("Qual é a sua idade?"))
 if (idade < 65 && idade >= 18){
 alert("Voto obrigatório")
 }
-else if (idade <= 70 && idade >= 65){
+else if (idade < 18 && idade > 16){
 alert("Voto opcional")
 }
 else {
@@ -228,7 +228,7 @@ Exercício 17
     Exercício 18
         <script>
 let numero = Number(prompt("Qual a sua idade?"))
-if(numero>18 && numero<67){
+if(numero>67 || numero<18){
 alert("Você pode doar sangue!")
 }
 else{
@@ -239,22 +239,22 @@ alert("Você não pode doar sangue!")}
         <script>
         let dia = Number(prompt("Digite um número de 1 a 7"))
         switch (dia) {
-            case dia = 1:
+            case 1:
             alert("Domingo")
             break;
-            case dia = 2:
+            case 2:
             alert("Segunda-feira")
             break;
-            case dia = 3:
+            case 3:
             alert("Terça-feira")
             break;
-            case dia = 4:
+            case 4:
             alert("Quarta-feira")
             break;
-            case dia = 5:
+            case 5:
             alert("Quinta-feira")
             break;
-            case dia = 6: 
+            case 6: 
             alert("Sexta-feira")
             break;
             default: 
@@ -315,5 +315,8 @@ alert("Você não pode doar sangue!")}
             alert("Boa tarde!")
             break;
             case "N":
-            alert("Boa noite")}
+            alert("Boa noite")
+            break;
+            default:
+            alert("O valor digitado é inválido)}
     </script>
