@@ -98,3 +98,17 @@ Exercício 5
 
 Exercício 6
 
+    <script>   
+    for (let i = 0; i < 5; i++){
+            let valor1 = +prompt("Digite o primeiro valor")
+            let valor2 = +prompt("Digite o segundo valor")
+            let valor3 = +prompt("Digite o terceiro valor")
+            let valor4 = +prompt("Digite o quarto valor")
+            let valor5 = +prompt("Digite o quinto valor")
+            let soma = valor1 + valor2 + valor3 + valor4 + valor5
+            let media = soma/5
+            alert(`A soma dos valores é ${soma} e a média é ${media.toFixed(2)}`)
+            
+            
+        }
+    </script>
