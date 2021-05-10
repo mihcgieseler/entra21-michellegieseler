@@ -7,8 +7,16 @@
 </head>
 <body>
     <script>
-    for (let i = 0; i <= 100000; i+=1000)
-    console.log(i)
+        let numero = +prompt("Digite um número")
+        let resultado = ""
+        for (let i = 1; i <= numero; i++){
+            if(i%2!=0){
+                resultado +=`${i}, `
+            }
+        }
+        console.log(resultado)
+        
+
     </script>
 </body>
 </html>
