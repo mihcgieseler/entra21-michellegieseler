@@ -130,7 +130,7 @@ Exercício 6
 
 
 Exercício 8
-        let numero = +prompt("Digite um número de 0 a 10")
+        let numero = +prompt("Digite um número")
         for (let i = 0; i <=10; i++){
             console.log(`${numero} x ${i} = ${numero*i}`)
         }
