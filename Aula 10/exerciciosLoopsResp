@@ -120,8 +120,8 @@ Exercício 6
         let resultado = ""
         for (let i = 1; i <= numero; i++){
             if(i%2!=0){
-                if (resultado!=''){
-                    resultado +=','
+                if (resultado!=""){
+                    resultado +=","
                 }
                 resultado +=`${i}`
             }
