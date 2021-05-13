@@ -7,32 +7,29 @@
 </head>
 <body>
     <script>
-        let vetor = []
-        let contadoraDePares = 0
-        while (contadoraDePares <6){
-            let valor = +prompt("Digite um valor")
-            if(valor%2!=0){
-                console.log("Número inválido")
-                continue
+        let vetor1 = []
+        for(let i = 0; i < 5; i++){
+            let numeros = +prompt(`Digite o ${i + 1}º valor`)
+            vetor1[i] = numeros
+        }
+        let vetor2 = []
+        for(let x = 0; x < 5; x++){
+            let numeros = +prompt(`Digite o ${x + 1}º número`)
+            vetor2[x] = numeros
+        }
+        iguais=true
+        for(let y = 0; y < 5; y++){
+            if(vetor1[y] != vetor2[y]){
+                iguais=false
+                break
             }
-            vetor[contadoraDePares]=valor
-            contadoraDePares++
-
         }
-        for (let i = vetor.length - 1; i >= 0; i--) {
-            console.log(vetor[i])
+        if(iguais==true){
+        console.log("Os vetores são iguais")
         }
-        
-        
+        else{
+            console.log("Os vetores são diferentes")
+        }
     </script>
 </body>
 </html>
-2 4 8 10 2 2
-1 2 3 4  5 6
-
-
-2 2 10 8 4 2
-
-1 1 1 1 1 1 1 2 4 8 10 2 2
-8) Crie um programa que leia 6 valores inteiros pares (GARANTA QUE ELES SEJAM PARES) e, em
-seguida, mostre na tela os valores lidos na ordem inversa.
