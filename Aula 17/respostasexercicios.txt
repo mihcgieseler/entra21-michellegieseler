@@ -69,3 +69,57 @@ Exercício 6
 
 
 Exercício 7
+    let vetor = []
+    function cadastroNumerosInteiros (){
+        for (let i = 0; i < 50; i++) {
+        let numero = Math.floor(Math.random() *1000)+1
+        vetor[i]=numero
+        }
+    }
+    function maiorMenorValor (){
+        let maior = Math.max.apply(null, vetor)
+        console.log(`O maior número da função é ${maior}`)
+        let menor = Math.min.apply(null, vetor)
+        console.log(`O menor número da função é ${menor}`)
+    }
+    cadastroNumerosInteiros()
+    maiorMenorValor()
+
+
+Exercício 8
+        function transformarIdadeDias (anos, meses, dias){
+            let resultadoAnos = anos*365
+            let resultadoMeses = meses*30
+            let resultado = resultadoAnos+resultadoMeses+dias
+            console.log(`O resultado em dias é ${resultado}`)
+        }
+        let anos = +prompt("Quantos anos você tem?")
+        let meses = +prompt("Quantos meses faz que você fez aniversário?")
+        let dias = +prompt("Quantos dias sobraram?")
+    
+    transformarIdadeDias(anos, meses, dias)
+
+
+Exercício 9
+        function divisores(numero){
+            let total = 0 
+            for (let i = 1; i <= numero; i++){
+                if(numero%i==0){
+                    total++
+                }
+            } 
+            return total
+        }
+        let numero = +prompt("Digite um número para saber seus divisores")
+        console.log(`Esse número tem ${divisores(numero)} divisores`)
+
+Exercício 10
+    function calcularFatorial(num) {
+        let fatorial = 1;
+            for(i = num; i > 0; i--) {
+            fatorial *= i;
+        }
+        return fatorial;
+      }
+    let num = +prompt("Digite um número para saber seu fatorial")
+    console.log(calcularFatorial(num))
