@@ -1,0 +1,71 @@
+Exercício 1
+    function ehPositivo (numero) {
+        return numero > 0
+    }
+    let numero = +prompt("Digite um número")
+    console.log(ehPositivo(numero))
+
+
+Exercício 2
+       function minima (a,b){
+            if (a < b){
+                return a
+            }else{
+                return b
+        }
+    }
+        let a= +prompt("Digite o valor A")
+        let b= +prompt("Digite o valor B")
+    console.log(minima(a,b))
+
+Exercício 3
+
+        function potencia(a,b){
+            return(a**b)
+        }
+        let a = +prompt("Digite o valor A")
+        let b = +prompt("Digite o valor B")
+        console.log(potencia(a,b))
+
+Exercício 4
+        function media(a,b,c){
+            return ((a+b+c)/3)
+        }
+        let a = +prompt("Digite a primeira nota")
+        let b = +prompt("Digite a segunda nota")
+        let c = +prompt("Digite a terceira nota")
+        console.log(media(a,b,c))
+
+
+Exercício 5
+        function mediaConceito (media){
+            if (media<=4.9){
+                return "D"
+            } else if (media>=5.0 && media<=6.9){
+                return "C"
+            } else if (media>=7.0 && media<=8.9){
+                return "B"
+            } else if (media>=9.0 && media<=10.0){
+                return "A"
+            }
+        } 
+    let media = +prompt("Qual a média do aluno?")
+    let letraMedia = mediaConceito(media)
+    console.log(letraMedia)
+
+Exercício 6
+        function dadosUsuario (altura, sexo){
+            if (sexo == "feminino"){
+                return (62.1*altura-44.7)
+            }else if (sexo == "masculino"){
+                return (72.7*altura-58)
+            }
+
+        }
+        let altura = +prompt("Qual a sua altura?")
+        let sexo = prompt("Qual o seu sexo?")
+        let resultado = dadosUsuario(altura, sexo)
+        console.log (resultado)
+
+
+Exercício 7

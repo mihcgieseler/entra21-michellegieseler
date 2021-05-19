@@ -1,0 +1,50 @@
+Exercício 1
+        for(let i = 0; i < 10; i++){
+            console.log("Olá mundo!")
+        }
+
+
+        i = 0
+        while(i<10){
+            console.log("Olá mundo!")
+            i++;
+        }
+
+
+        let i = 0
+        do {
+            console.log("Olá mundo!")
+            i++
+        } while(i < 10)
+
+
+
+Exercício 2
+        for(let i = 1; i < 11; i++){
+            console.log(`Estou aparecendo pela ${i}ª na tela!`)
+        }
+
+
+        let i = 1
+        while(i < 11){
+            console.log(`Estou aparecendo pela ${i}ª vez na tela!`)
+            i++
+        }
+
+
+        let i = 1
+        do {
+            console.log(`Estou aparecendo pela ${i}ª vez na tela!`)
+            i++
+        }while (i<11)
+
+
+Exercício 3
+        let i = 10
+        while (i > 0){
+        console.log(i)
+        i--}
+        console.log("FIM")
+
+
+Exercício 4
