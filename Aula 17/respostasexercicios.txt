@@ -39,19 +39,20 @@ Exercício 4
 
 Exercício 5
         function mediaConceito (media){
+            let conceito 
             if (media<=4.9){
-                return "D"
-            } else if (media>=5.0 && media<=6.9){
-                return "C"
-            } else if (media>=7.0 && media<=8.9){
-                return "B"
-            } else if (media>=9.0 && media<=10.0){
-                return "A"
+                conceito = "D"
+            } else if (media<=6.9){
+                conceito = "C"
+            } else if (media<=8.9){
+                conceito = "B"
+            } else if (media<=10.0){
+                conceito = "A"
             }
         } 
     let media = +prompt("Qual a média do aluno?")
     let letraMedia = mediaConceito(media)
-    console.log(letraMedia)
+    console.log(conceito)
 
 Exercício 6
         function dadosUsuario (altura, sexo){
@@ -78,9 +79,10 @@ Exercício 7
     }
     function maiorMenorValor (){
         let maior = Math.max.apply(null, vetor)
-        console.log(`O maior número da função é ${maior}`)
         let menor = Math.min.apply(null, vetor)
-        console.log(`O menor número da função é ${menor}`)
+
+        return[menor, maior]
+        
     }
     cadastroNumerosInteiros()
     maiorMenorValor()

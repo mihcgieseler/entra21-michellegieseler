@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let flagMenu = true
+        function menu() {
+            while (flagMenu === true) {
+                let mostrarOpcoes = +prompt (" 1) Cadastrar aluno \n 2) Editar informações do aluno \n 3) Cadastrar notas de um aluno \n 4) Listar alunos \n 0) Sair")
+                switch (mostrarOpcoes) {
+                    case 0:
+                        alert("Finalizando Programa...")
+                        flagMenu = false
+                        break;
+                    case 1:
+                        cadastrarAluno()
+                        break;
+                    case 2:
+                        editarInformacoes()
+                        break;
+                    case 3:
+                        cadastrarNotas()
+                        break;
+                    case 4:
+                            matriz()
+                        mostraMatriz()
+                        break;
+                    default: 
+                }
+            }
+        }
+
+        let media = 0
+        let soma = 0
+        let matricula
+        let notas = []
+        let matriz = []
+
+        let cadastrarAluno = () =>{
+            matriz[linha] = []
+            matricula = +prompt("Digite a matricula:")
+            if (isNaN(matricula)) {
+                alert("Matrícula não é valida")
+                return
+            }
+                for (let verificar = 0; verificar < linha; verificar++) {
+                    if (matricula === matriz[verificar][0]) {
+                        alert("Esta matrícula já está cadastrada.")
+                        return
+                    }
+                }
+            let nome = prompt("Digite o nome do aluno:")
+            if (nome >= 0 || nome < 0) {
+                alert("Nome não é valido")
+                return
+            }
+            matriz[linha][1] = nome
+            matriz[linha][0] = matricula
+            matriz[linha][1] = prompt("Digite o nome do aluno:")
+            alert("Aluno cadastrado.")
+            alunosCadastrados++
+            linha++
+
+            let MatriculaVerificar = +prompt("Digite a matrícula do aluno")
+            aluno = verificarMatricula(MatriculaVerificar)
+            if (aluno >= 0 || aluno === true) { // se linha = 0 nao entra na opcao
+                for (let i = 0; i < 3; i++) {
+                    notas[i] = +prompt("Digite a nota do seu aluno")
+                for (let i = 0; i < 3;) {
+                    let verificaNotas = +prompt(`Digite a ${i + 1}º nota do aluno`)
+                    if (verificaNotas > 10 || verificaNotas < 0) {
+                        alert("Nota invalida")
+                        continue
+                    } else {
+                        notas[i] = verificaNotas
+                        i++  
+                    }
+
+                }
+            armazenarNotas(notas, aluno)
+            }
+
+            matriz[aluno][4] = notas[2]
+            calcularMedia(aluno)
+        }
+        let media = 0
+        let soma = 0
+        function calcularMedia(aluno) {
+            for(let i = 0; i <3; i++) {
+                soma += notas[i]
+            }
+            media = soma/3
+            matriz[aluno].push(media)
+            media.toFixed(2)
+            matriz[aluno].push(media.toFixed(2))
+        }
+        function mostraMatriz() {
+        let mostrandoMatriz = "Matricula\tAluno\tNota 1\tNota 2\tNota 3\t  Média \n"
+            for (let i = 0; i < linha; i++) {
+                for (let j = 0; j < 6; j++) {
+                    let adicionar = matriz[i][j]
+                    if (adicionar === undefined) {
+                        mostrandoMatriz += "\t" + "--" + "\t"
+                    } else {
+                        mostrandoMatriz += "\t" + matriz[i][j] + "\t"
+                    }
+
+                }
+            mostrandoMatriz += "\n"    
+            }
+        console.log(mostrandoMatriz);
+        }
+
+        menu()
+    </script>
+</body>
+</html>
