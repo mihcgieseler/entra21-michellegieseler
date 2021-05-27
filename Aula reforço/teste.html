@@ -7,7 +7,11 @@
 </head>
 <body>
     <script>
-
+        let preco = +prompt("Qual o valor do produto?")
+        let desconto = +prompt("Qual o percentual de desconto?")
+        let descontoValor = (desconto * preco)/100
+        let precoFinal = (preco - descontoValor)
+        alert(`TOTAL = ${precoFinal}\n DESCONTO = ${descontoValor}`)
     </script>
 </body>
 </html>
