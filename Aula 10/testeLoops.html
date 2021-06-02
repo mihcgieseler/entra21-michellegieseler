@@ -8,16 +8,35 @@
 </head>
 <body>
     <script>
-        function minima (a,b){
-            if (a < b){
-                return a
-            }else{
-                return b
+        for (let i = 0; i > 0; i++){
+            if (voto === 0){
+            break
+            }
+        let joseBolinha = 0
+        let mariaNascimento = 0
+        let joaoSilva = 0
+        let votoNulo = 0
+        let emBranco = 0
+        let voto = +prompt("Em quem você vota?\n1 - José Bolinha\n2 - Maria Nascimento\n3 - João da Silva\n4 - Voto nulo\n5 - Voto em branco")
+        switch(voto){
+            case 1:
+                joseBolinha++
+                break;
+            case 2:
+                mariaNascimento++
+                break;
+            case 3:
+                joaoSilva++
+                break;
+            case 4:
+                votoNulo++
+                break;
+            case 5:
+                emBranco++
+                break;
         }
-    }
-        let a= +prompt("Digite o valor A")
-        let b= +prompt("Digite o valor B")
-    console.log(minima(a,b))
+        }
+        console.log(`Total de votos:\nJosé Bolinha: ${joseBolinha} voto(s)\nMaria Nascimento:${mariaNascimento} voto(s)\nJoão da Silva: ${joaoSilva} voto(s)\nVotos nulos: ${votoNulo} voto(s)\nVoto em branco: ${emBranco}`)
 
     </script>
 </body>

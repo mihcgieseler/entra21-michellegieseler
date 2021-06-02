@@ -1,0 +1,60 @@
+FASES ALGORITMO
+
+1 -
+        let meses = +prompt("Quantos meses você quer calcular?")
+        let quantidadeDias = meses * 30
+        alert(`${meses} meses tem ${quantidadeDias} dias`)
+
+2 -
+        let preco = +prompt("Qual é o valor do produto?")
+        let desconto = +prompt("Qual a porcentagem de desconto?")
+        let valorDesconto = (desconto * preco)/100
+        valorProduto = preco - valorDesconto
+        alert(`TOTAL = ${valorProduto}\nDESCONTO = ${valorDesconto}`)
+
+IF
+
+1 -
+        let numero = +prompt("Digite um número")
+        if (numero%2==0){
+            alert("O número é par")
+        }
+        else {
+            alert("O número é ímpar")
+        }
+
+2 - 
+
+        let salario = +prompt("Qual é o seu salário?")
+        let prestacao = +prompt("Qual é o valor da parcela do empréstimo?")
+        if(prestacao> (20 * salario)/100){
+            alert("Empréstimo não concedido")
+        }
+        else{
+            alert("Empréstimo concedido")
+        }
+
+3 -
+        let lado1 = +prompt("Digite a medida do primeiro lado")
+        let lado2 = +prompt("Digite a medida do segundo lado")
+        let lado3 = +prompt("Digite a medida do terceiro lado")
+        if(lado1 == lado2 && lado1 == lado3){
+            alert("Triângulo equilátero")
+        }
+        else if (lado1 != lado2 && lado1 != lado3 && lado2 != lado3){
+            alert("Triângulo escaleno")
+        }
+        else {
+            alert("Triângulo isósceles")
+        }
+
+
+LOOPS
+1-
+        let somaValores = 0
+        for(let i = 0; i < 5; i++){
+            let valor = +prompt("Digite um valor")
+            somaValores += valor
+        }
+        let media = somaValores / 5
+        console.log(`Soma dos valores: ${somaValores}\nMédia dos valores:${media}`)

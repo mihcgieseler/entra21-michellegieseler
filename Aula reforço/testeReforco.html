@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let somaValores = 0
+        for(let i = 0; i < 5; i++){
+            let valor = +prompt("Digite um valor")
+            somaValores += valor
+        }
+        let media = somaValores / 5
+        console.log(`Soma dos valores: ${somaValores}\nMédia dos valores:${media}`)
+    </script>
+</body>
+</html>
+1) Faça um programa que peça ao usuario para digitar 5 valores. Ao final, mostre a soma desses
+valores e média desses valores (arredondado para duas casas decimais).
+
+2) Faça um script que receba valores inteiros e mostre na tela quantos desses valores recebidos estão no intervalo
+[10, 20] e quantos não estão. O programa irá parar de pedir números quando o usuário digitar um número negativo.
