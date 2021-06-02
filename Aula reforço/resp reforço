@@ -1,0 +1,15 @@
+Exercício Fases Algoritmo
+
+        let quantidadeMeses = +prompt("Digite a quantidade de meses")
+        let totalDias = (quantidadeMeses * 30)
+        alert (`São ${totalDias} dias`)
+
+
+        let preco = +prompt("Qual o valor do produto?")
+        let desconto = +prompt("Qual o percentual de desconto?")
+        let descontoValor = (desconto * preco)/100
+        let precoFinal = (preco - descontoValor)
+        alert(`TOTAL = ${precoFinal}\n DESCONTO = ${descontoValor}`)
+
+
+

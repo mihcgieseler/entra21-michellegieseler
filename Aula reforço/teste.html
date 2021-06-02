@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let preco = +prompt("Qual o valor do produto?")
+        let desconto = +prompt("Qual o percentual de desconto?")
+        let descontoValor = (desconto * preco)/100
+        let precoFinal = (preco - descontoValor)
+        alert(`TOTAL = ${precoFinal}\n DESCONTO = ${descontoValor}`)
+    </script>
+</body>
+</html>
+
+
+2) Construa um script que leia o preço de um produto, o percentual de desconto e calcule 
+o valor a pagar e o valor do desconto.
+Entrada:       Saida:
+10             TOTAL = 9 
+10             DESCONTO = 1
+
+100            TOTAL = 80
+20             DESCONTO = 20
