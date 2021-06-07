@@ -57,4 +57,58 @@ LOOPS
             somaValores += valor
         }
         let media = somaValores / 5
-        console.log(`Soma dos valores: ${somaValores}\nMédia dos valores:${media}`)
+        console.log(`Soma dos valores: ${somaValores}\nMédia dos valores:${media.toFixed(2)}`)
+
+
+MATRIZES
+1 -
+        let matriz = [
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0]
+        ];
+
+        for (let linha = 0; linha < 3; linha++){
+            for(let coluna = 0; coluna <3; coluna++){
+                matriz[linha][coluna] = +prompt("Digite um valor")
+            }
+        }
+        let valor = +prompt("Digite um valor para ser encontrado na matriz")
+        let posicao = 0
+        for (let linha = 0; linha < 3; linha++){
+            for (let coluna = 0; coluna < 3; coluna++){
+                if(matriz[linha][coluna]===valor){
+                    posicao = [linha, coluna]
+                }
+            }
+        }
+        
+        console.log(posicao || "Não encontrei!")
+        let string = 0
+        for(let linha = 0; linha <3; linha++){
+            for(let coluna = 0; coluna < 3; coluna++){
+                string += matriz[linha, coluna]
+                if (coluna != 2){
+                string = ","
+                }
+                console.log(string)
+                string = ""
+            }
+        }
+
+
+2 -
+        let matriz = [
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0]
+        ]
+        for (let linha = 0; linha < 5; linha++){
+            for (let coluna = 0; coluna < 5; coluna++){
+                if ([linha] = [coluna]){
+                    linha, coluna = 1
+                }
+            }
+        } console.log(matriz)
