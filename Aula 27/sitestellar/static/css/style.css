@@ -1,0 +1,10 @@
+body {
+    background-image: linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.wrapper{
+    width: 80%;
+    margin: 0px auto;
+}
