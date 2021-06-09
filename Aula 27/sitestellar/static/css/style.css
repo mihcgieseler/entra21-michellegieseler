@@ -3,8 +3,76 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    text-align: center;
 }
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .wrapper{
     width: 80%;
     margin: 0px auto;
+}
+
+.main-header a {
+    color: white;
+}
+
+.primeiro-texto{
+    margin-bottom: 90px;
+}
+
+.nav{
+    background-color: rgba(255, 255, 255, 0.904);
+    padding: 10px;
+    margin: 0px auto;
+}
+.nav li{
+    display: inline-block;
+    text-align: center;
+}
+.nav a{
+    padding: 40px;
+    color: #636363;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 17px;
+    text-align: center;
+}
+
+.fundo-branco{
+    background-color: white;
+}
+
+.conteudo {
+    display: inline-block;
+    width: 60%;
+}
+
+.conteudo h2, .conteudo p {
+    color: #636363;
+    font-weight: 300;
+}
+
+.conteudo h2{
+    font-size: 40px;
+}
+
+.img img{
+    width: 30%;
+    float: right;
+    border-radius: 100%;
+    
+}
+
+.titulo-2-sessao{
+    font-size: 2em;
+}
+.section1 {
+    border: 1px solid black;
 }
