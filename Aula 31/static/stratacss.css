@@ -1,9 +1,56 @@
 body {
     background-image: url(https://html5up.net/uploads/demos/strata/images/bg.jpg);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    background-size: contain;
+    color: grey;
+    width: 100%;
+    
+}
+.button-back{
+    background-color:rgba(55, 61, 73, 0.975);
+    color: white;
+    float: inline-start;
+    border-color: #575d69;
+}
+.button-download{
+    background-color: tomato;
+    color: white;
+    float: inline-end;
+}
+.primeira-linha {
+    background: rgba(55, 61, 73, 0.975);
+    box-shadow: none;
+    color: white;
+    line-height: 15px;
 }
 
 main{
     background-color: white;
     padding: 0;
     margin: 0;
+    color: grey;
+    text-align: center;
+    padding: 0%;
+}
+
+main h2{
+    text-align: center;
+    font-size: 15px;
+}
+
+.apresentacao{
+    font-size: 9px;
+    text-align:center;
+    line-height: 15px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.primeira-imagem img {
+    border-radius: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 20%;
 }
