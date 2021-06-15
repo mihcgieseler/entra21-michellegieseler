@@ -1,56 +1,160 @@
 body {
-    background-image: url(https://html5up.net/uploads/demos/strata/images/bg.jpg);
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     text-decoration: none;
-    background-size: contain;
-    color: grey;
-    width: 100%;
-    
+    color: #a2a2a2;    
 }
-.button-back{
-    background-color:rgba(55, 61, 73, 0.975);
-    color: white;
-    float: inline-start;
-    border-color: #575d69;
+
+h1, h2, h3, h4{
+    font-weight: 400;
+    color: #787878;
 }
-.button-download{
-    background-color: tomato;
-    color: white;
-    float: inline-end;
+
+img {
+    max-width: 100%;
+    display: block;    
 }
-.primeira-linha {
-    background: rgba(55, 61, 73, 0.975);
-    box-shadow: none;
+
+#header {
+    background-image: url(https://html5up.net/uploads/demos/strata/images/bg.jpg);
+    font-size: 11px;
+    background-position: center;   
+    background-size: cover;
+    text-align:center;    
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
+    color:  #FFFFFF80;
+    padding: 72px 24px;
+}
+
+#header h1{
+    line-height: 30px;
+    margin: 0px;
+}
+#header h1 strong{
     color: white;
-    line-height: 15px;
+}
+
+.primeira-imagem {
+    border-radius: 100%;    
+    margin-bottom: 30px;    
 }
 
 main{
     background-color: white;
-    padding: 0;
+    padding: 36px 24px 4px;
     margin: 0;
     color: grey;
-    text-align: center;
-    padding: 0%;
+    padding: 36px 24px 4px;
+    font-size: 16px;
+    display: block;
 }
 
 main h2{
     text-align: center;
-    font-size: 15px;
+    font-size: 21.6px;
+    line-height: 1.35em;
 }
 
-.apresentacao{
-    font-size: 9px;
-    text-align:center;
-    line-height: 15px;
-    justify-content: space-between;
-    margin-bottom: 20px;
+.ler-mais{
+    padding: 0px 24px;
+    border: solid 3px #efefef;
+    line-height: 2.75em;
+    display: block;
+    background-color: transparent;
+    text-align: center;
+}
+.icons{
+    padding-left: 0;
+    text-align: center;
+}
+.icons li{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 20px;
+    justify-items: center;
+}
+.final li{
+    list-style-type: none;
+    text-align: center;
+    font-size: 12.8px;
 }
 
-.primeira-imagem img {
-    border-radius: 100%;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    width: 20%;
+#footer{
+    background-image: url(img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 36px 24px;
+    line-height: 25px;
+}
+.link{
+    border-bottom: 1px dotted;
+    color: inherit;
+    text-decoration: none;
+}
+.texto-final h2{
+    font-size: 19.2px;
+    margin-bottom: 0 0 19.2px;
+    text-align: left;
+}
+
+#name{
+    padding: 0px 12px;
+    border:2px;
+    width: 300px;
+    line-height: 40px;
+    display: block;
+    background-color: transparent;
+    text-align: left;
+    margin-right: 30px;
+}
+#email{
+    padding: 0px 12px;
+    border: 2px;
+    width: 300px;
+    line-height: 40px;
+    display: block;
+    background-color: transparent;
+    text-align: left;
+    margin-right: 30px;
+}
+#message{
+    padding: 12px;
+    border: 2px;
+    width: 300px;
+    height: 80px;
+    display: block;
+    background-color: transparent;
+}
+#message::-webkit-input-placeholder{
+    text-align: left;
+}
+
+.parte-final a{
+    padding: 0px 24px;
+    border: solid 3px #efefef;
+    line-height: 2.75em;
+    display: block;
+    background-color: transparent;
+    text-align: center;
+    font-size: 16px; 
+}
+.contato{
+    color: #a2a2a2;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 25px;
+
+}
+
+.enviar{
+    padding: 0px 24px;
+    border: solid 3px #efefef;
+    line-height: 2.75em;
+    display: block;
+    background-color: transparent;
+    text-align: center;
 }
