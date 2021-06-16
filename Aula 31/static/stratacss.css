@@ -57,7 +57,7 @@ main h2{
     line-height: 1.35em;
 }
 
-.ler-mais{
+.botao{
     padding: 0px 24px;
     border: solid 3px #efefef;
     line-height: 2.75em;
@@ -76,6 +76,10 @@ main h2{
     font-weight: 900;
     letter-spacing: 20px;
     justify-items: center;
+}
+.final{
+    padding-left: 0px;
+    text-align: center;
 }
 .final li{
     list-style-type: none;
@@ -101,36 +105,20 @@ main h2{
     text-align: left;
 }
 
-#name{
+.input{
+    box-sizing: border-box;
     padding: 0px 12px;
-    border:2px;
-    width: 300px;
+    border:2px solid transparent;
+    width: 100%;
     line-height: 40px;
     display: block;
     background-color: transparent;
     text-align: left;
     margin-right: 30px;
+    outline: 0;
 }
-#email{
-    padding: 0px 12px;
-    border: 2px;
-    width: 300px;
-    line-height: 40px;
-    display: block;
-    background-color: transparent;
-    text-align: left;
-    margin-right: 30px;
-}
-#message{
-    padding: 12px;
-    border: 2px;
-    width: 300px;
-    height: 80px;
-    display: block;
-    background-color: transparent;
-}
-#message::-webkit-input-placeholder{
-    text-align: left;
+.input:focus{
+    border-color: green;
 }
 
 .parte-final a{
@@ -158,3 +146,37 @@ main h2{
     background-color: transparent;
     text-align: center;
 }
+
+@media screen and (min-width:480px){
+    .botao {
+        display:inline-block;
+    }
+    .fotos-textos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+    .fotos-textos h2{
+        grid-column: span 2;
+        text-align: left;
+    }
+    .inputs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
+    #message{
+        grid-column: span 2;
+    }
+    .final li{
+        display: inline-block;
+        border-right: 1px solid grey;
+        padding-right: 5px;
+    }
+    .final li:last-of-type{
+        border: none;
+    }
+}
+
+position aboslut para fazer op footer ir pra cima do header
+
