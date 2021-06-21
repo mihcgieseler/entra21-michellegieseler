@@ -30,12 +30,12 @@ header ul li a{
     margin-bottom: 20px;
 }
 nav a {
-    color: rgba(248, 245, 245, 0.857);
+    color: rgba(0, 0, 0, 0.857);
     height: inherit;
     width: 200px;
     border: 1px solid rgba(238, 234, 234, 0);
     border-radius: 0.30em;
-    background-color: rgba(39, 38, 38, 0.618);
+    background-color: rgba(218, 211, 211, 0.618);
     padding-top: 10px;
 }
 .container1 img{
@@ -64,4 +64,35 @@ nav a {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    color: inherit;
+    
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+@media screen and (min-width:960px){
+
+    .primeiro-texto{
+        font-size: 60px;
+    }
+    .apresentacao{
+        font-size: 30px;
+        margin-bottom: 60px;
+    }
+    .dropdown h3{
+        font-size: 40px;
+    }
+    .dropdown-content{
+        font-size: 30px;
+    }
+    .dropdown-content a{
+        text-decoration: none;
+        color: slategray;
+    }
+    ul{
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
 }

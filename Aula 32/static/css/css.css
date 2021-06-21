@@ -114,8 +114,8 @@ main{
         width: 100%;
     }
     .container img{
-        width: 400px;
-        height: 220px;
+        width: 600px;
+        height: 350px;
         border-radius: 2%;
         border: 2px;
         border-color: solid black;
