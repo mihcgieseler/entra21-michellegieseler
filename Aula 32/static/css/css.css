@@ -1,8 +1,33 @@
 body{
-    background: rgb(244,69,198);
-    background: radial-gradient(circle, rgba(244,69,198,0.8015581232492998) 0%, rgba(239,255,35,0.7875525210084033) 100%);
+    background-image: url(../img/fundo.jpg);
     text-align: center;
-    font-family: 'Nixie One', cursive;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+header ul {
+    text-align: center;
+    padding: 25px;
+    margin: 0;
+}
+header ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 10px 0 10px;
+}
+header ul li a {
+    border: 2px solid white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 3;
+    text-decoration: none;
+}
+nav a {
+    color: rgba(0, 0, 0, 0.857);
+    height: inherit;
+    width: 200px;
+    border: 1px solid rgba(238, 234, 234, 0);
+    border-radius: 0.30em;
+    background-color: rgba(218, 211, 211, 0.618);
+    padding-top: 10px;
 }
 
 .fotos-textos h2{
@@ -10,25 +35,22 @@ body{
     padding-top: 15px;
     padding-bottom: 30px;
 }
-.menu{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    background-color: white;
+.menu a{
+    background-color: none;
+    text-decoration: none;
+    color: white;
 }
-
 .locais{
-    background-color: rgba(239,255,35,0.7875525210084033);
     border-radius: 5%;
-    padding: 8px 2px;
+    padding: 8px 4px;
+    background-color: none;
 }
 .necessario{
-    background-color: rgba(239,255,35,0.7875525210084033);
     border-radius: 5%;
     padding: 8px 2px;
 }
-
 main{
-    background-color: white;
+    background-color: none;
     margin: 0;
 }
 .primeiro-texto{
@@ -38,13 +60,14 @@ main{
     padding: 10px;
     margin: 0px;
 }
-
 #header{
-    background-color: white;
+    background-color: none;
 }
 #header h1{
     text-align: center;
     font-size: 40px;
+    margin-top: 40px;
+    padding-top: 20px;
 }
 #header p{
     font-size: 20px;
@@ -54,6 +77,8 @@ main{
     width: 300px;
     height: 180px;
     border-radius: 2%;
+    border: 2px;
+    border-color: solid black;
 }
 .container h3{
     margin: 0px;
@@ -66,4 +91,36 @@ main{
     font-size: 10px;
     text-decoration: none;
 }
+.container{
+    border-color: solid white;
+    border: 5px;
+}
 
+@media screen and (min-width:960px){
+    .fotos-textos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+    .fotos-textos h2{
+        grid-column: span 2;
+        text-align: center;
+    }
+    #diferente{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 2;
+        width: 100%;
+    }
+    .container img{
+        width: 400px;
+        height: 220px;
+        border-radius: 2%;
+        border: 2px;
+        border-color: solid black;
+    }
+    
+  
+
+}

@@ -1,10 +1,43 @@
 body{
-    background: rgb(244,69,198);
-    background: radial-gradient(circle, rgba(244,69,198,0.8015581232492998) 0%, rgba(239,255,35,0.7875525210084033) 100%);
+    background-image: url(../img/fundo.jpg);
     text-align: center;
-    font-family: 'Nixie One', cursive;
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
 }
-
+header ul {
+    text-align: center;
+    padding: 25px;
+    margin: 0;
+}
+header ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 10px 0 10px;
+}
+header ul li a{
+    border: 2px solid white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 6%;
+    text-decoration: none;
+}
+.primeiro-texto{
+    margin: 0px;
+    font-size: 40px;
+}
+.apresentacao{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+nav a {
+    color: rgba(248, 245, 245, 0.857);
+    height: inherit;
+    width: 200px;
+    border: 1px solid rgba(238, 234, 234, 0);
+    border-radius: 0.30em;
+    background-color: rgba(39, 38, 38, 0.618);
+    padding-top: 10px;
+}
 .container1 img{
     width: 300px;
     height: 200px;
@@ -24,4 +57,24 @@ body{
 }
 .texto-cidade{
     padding-bottom: 20px;
+}
+
+
+@media screen and (min-width:960px){
+    .fotos-tulum{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+    .fotos-tulum h2{
+        grid-column: span 2;
+        text-align: center;
+    }
+    .container img{
+        width: 400px;
+        height: 220px;
+        border-radius: 2%;
+        border: 2px;
+        border-color: solid black;
+    }
 }
