@@ -1,0 +1,80 @@
+array.from - converte pra um vetor pra poder usar métodos de array
+onsole.log(Array.from(document.body.childNodes).filter(element=> element.nodeName == "#text"))
+retorna os elementos em array
+
+(document.body.childNodes) -- coleção
+
+
+abrir a coleção que estou vendo, clicar em proto, symbol iterator = pode iterar em cima dele (posso fazer um for)
+
+para selecionar o elemento pelo id:
+let elemento = document.getElementById("#elem")
+console.log(elemento)
+
+querySelector -> Seleciona o primeiro elemento que corresponde ao seletor css
+let elemento = document.querySelecto ("#elem")
+elemento.style.backgroundColor = "blue"
+
+
+querySelectorAll -> Seleciona todos os elementos que correspondem ao seletor CSS
+let elementos = document.querySelectorAll("ul > li:first-child")
+for (let elemento of elementos) {
+elemento.style.backgroundColor = "red"
+}
+
+innerHTML apaga o que tinha e refaz o que você quiser
+
+pra ver as propriedades- console.dir
+quando não consegue acessar pelo nome, usar
+getAttribute(nome)
+ex:
+img.getAttribute("novo")
+img.hasAttribute("novo") -> checar se existe
+img.setAttribute("novo", "valor") -> atribuir novo valor
+img.removeAttribute("alt") -> remove o atributo
+
+let paragraphs = document.querySelectorAll('[data-info]')      console.log(paragraphs[0].dataset.info)
+console.log(paragraphs[1].dataset.info)
+acessando todos os atributos que estão dentro do <p data-info=......></p>
+no console, se digitar paragraphs[0].dataset
+aparece quais os nomes dos parágrafos
+
+
+let paragraphs = document.querySelectorAll('[data-info]')      console.log(paragraphs[0].dataset.info)
+console.log(paragraphs[1].dataset.info)
+
+
+for (let paragraph of paragraphs) {
+let campo = paragraph.getAttribute('data-info') 
+paragraph.innerHTML = usuario[campo]
+}
+aqui acessando nome e idade dessa parte do código:
+let usuario = {
+nome: "William",
+idade: 25
+}
+
+
+
+
+<style>
+   .pedido[data-estado-pedido="novo"] {
+       color: green;
+   }
+   .pedido[data-estado-pedido="pendente"] {
+        color: yellow;
+   }
+   .pedido[data-estado-pedido="cancelado"] {
+        color: red;
+   }
+</style>
+
+- mudando um elemento com dataset
+let pedido = document.querySelector(".pedido")
+     pedido.dataset.estadoPedido = "pendente"
+
+
+
+        document.querySelector("a[href*='://']:not([href^='http://internal.com'])")
+      ^isso é com seletor css, se em algum lugar do ("a[href tiver :// e não tiver ([href^='http://internal.com'])" então muda de cor
+

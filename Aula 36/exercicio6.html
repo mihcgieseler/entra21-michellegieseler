@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        <ol id="elem">
+            <li>Filho 1</li>
+            <li>Filho 2</li>
+        </ol>
+
+    //opção 1
+        let lista = document.querySelector("#elem")
+
+            function clear(elem) {            
+                elem.innerHTML = ""            
+            }
+
+    //opção 2
+            
+            function clear2(elem) {
+                while(elem.firstElementChild) {
+                    elem.firstElementChild.remove()
+                }
+            }
+
+
+//segunda atividade:
+
+        <ul>
+            <li>Item 1</li>            
+            <li>Item 4</li>
+        </ul>
+        let li = document.querySelector("ul > li:firstChild")
+        li.insertAdjacentHTML("afterEnd", "<li>Item 2</li><li>Item 3</li>")
+
+
+// terceira atividade:
+<script>
+        <ul>
+            <li>Animais
+                <ul>
+                    <li>Mamíferos
+                        <ul>
+                            <li>Vacas</li>
+                            <li>Macacos</li>
+                            <li>Cachorros</li>
+                            <li>Tigres</li>
+                        </ul>
+                    </li>
+                    <li>Outros
+                        <ul>
+                            <li>Cobras</li>
+                            <li>Pássaros</li>
+                            <li>Lagartos</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        let lis = document.querySelectorAll("li")
+
+        for (let li of lis) {              
+            let descendentes = li.querySelectorAll("li").length
+
+            if (descendentes) {
+                li.firstChild.data += ` [${descendentes}]`
+            }
+        }
+    </script>
+</body>
+</html>
