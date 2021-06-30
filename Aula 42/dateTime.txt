@@ -1,0 +1,129 @@
+Exertcício 1
+
+<script>
+    let dataParametros = new Date(2012, 1, 20, 3, 12, 0)
+    console.log(dataParametros)
+</script>
+
+Exercício 2
+
+<script>
+    let data = new Date()
+    console.log(data)
+
+    let diaSemana = data.getDay()
+    function obtemDiaSemana(diaSemana){
+        switch(diaSemana){
+            case 0:
+            console.log("Domingo")
+            break;
+            case 1:
+            console.log("Segunda-feira")
+            break;
+            case 2:
+            console.log("Terça-feira")
+            break;
+            case 3:
+            console.log("Quarta-feira")
+            break;
+            case 4:
+            console.log("Quinta-feira")
+            break;
+            case 5:
+            console.log("Sexta-feira")
+            break;
+            case 6:
+            console.log("Sábado")
+            break;
+        }
+    }
+    obtemDiaSemana(diaSemana)
+</script>
+
+Exercício 3
+
+<script>
+        let data = new Date(2012, 0, 60)
+        console.log(data)
+
+        let mes = data.getMonth() 
+        function obtemUltimoDia(mes){
+            switch(mes){
+                case 0:
+                console.log("O último dia de janeiro é dia 31")
+                break;
+                case 1:
+                console.log("O último dia de fevereiro é dia 29")
+                break;
+                case 2:
+                console.log("O último dia de março é dia 31")
+                break;
+                case 3:
+                console.log("O último dia de abril é dia 30")
+                break;
+                case 4:
+                console.log("O último dia de maio é dia 31")
+                break;
+                case 5:
+                console.log("O último dia de junho é dia 30")
+                break;
+                case 6:
+                console.log("O último dia de julho é dia 31")
+                break;
+                case 7:
+                console.log("O último dia de agosto é dia 31")
+                break;                
+                case 8:
+                console.log("O último dia de setembro é dia 30")
+                break;
+                case 9:
+                console.log("O último dia de outubro é dia 31")
+                break;
+                case 10:
+                console.log("O último dia de novembro é dia 30")
+                break;
+                case 11:
+                console.log("O último dia de dezembro é dia 31")
+                break;
+            }
+        }
+        obtemUltimoDia(mes)
+    </script>
+
+
+Exercício 4
+<script>
+    function obtemSegundos(){
+        let data = new Date()
+        let horas = data.getHours()
+        let minutos = data.getMinutes()
+        let segundos = data.getSeconds()
+
+        let horasSegundos = horas * 3600
+        let minutosSegundos = minutos * 60
+        return (horasSegundos + minutosSegundos + segundos)
+
+    }
+    console.log(obtemSegundos())
+</script>
+
+
+Exercício 5
+<script>
+    function segundosParaAmanha(){
+    let data = new Date()
+    let horas = data.getHours()
+    let minutos = data.getMinutes()
+    let segundos = data.getSeconds()
+
+    let horasSegundos = horas * 3600
+    let minutosSegundos = minutos * 60
+    let segundosPassados = horasSegundos + minutosSegundos + segundos
+
+    let segundosDia = 86400
+    return segundosDia - segundosPassados
+    }
+    console.log(`Faltam ${segundosParaAmanha()} segundos para o dia de amanhã`)
+</script>
+
+Exercício 6

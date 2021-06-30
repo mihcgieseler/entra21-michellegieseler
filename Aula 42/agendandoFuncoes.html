@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function imprimeNumeros(comeco, fim){
+            console.log(comeco)
+            comeco++
+            if (comeco <= fim)
+                setTimeout(() => imprimeNumeros(comeco, fim), 1000)
+        }
+        
+        console.log(imprimeNumeros(1, 5))
+    </script>
+</body>
+</html>
+
+1) Escreva a função imprimeNumeros(comeco, fim) que mostre um número a cada segundo, começando
+do comeco até o fim.
+
+Faça duas variantes da solução:
+1. Usando setInterval
+2. Usando setTimeout

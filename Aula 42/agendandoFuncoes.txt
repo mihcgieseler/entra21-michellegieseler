@@ -1,0 +1,10 @@
+    <script>
+        function imprimeNumeros(comeco, fim){
+            console.log(comeco)
+            comeco++
+            if (comeco <= fim)
+                setTimeout(() => imprimeNumeros(comeco, fim), 1000)
+        }
+        
+        console.log(imprimeNumeros(1, 5))
+    </script>
