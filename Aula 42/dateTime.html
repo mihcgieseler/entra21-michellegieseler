@@ -1,13 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<meta charset="UTF-8" />
+<title>JavaScript Typewriter - MDN Example</title>
 <body>
-    <script>
+  <div class="display">
+    <!--DISPLAY-->
+    <span id="minuto">00</span><span>:</span><span id="segundo">00</span>
+ 
+</div>
+ <input type="time" id="timerInicial" value="10:20">
+<script>
+    console.log(timerInicial.value.split(":"))
+
+
+    let segundos = 0;
+    let minutos = 0;
+  
+    function segundo(){
+        segundos++;
+        if(segundos==60){
+            minutos++;
+            segundos=0;
+            document.getElementById('minuto').innerHTML=minutos
+        }
+ 
+        document.getElementById('segundo').innerHTML=segundos
         
-    </script>
+    }
+ 
+    setInterval(function(){ segundo() },1000)
+</script>
+ 
 </body>
 </html>

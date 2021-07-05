@@ -127,3 +127,25 @@ Exercício 5
 </script>
 
 Exercício 6
+<script>
+    console.log(formataData(new Date(new Date - 1))); // agora
+        console.log(formataData(new Date(new Date - 30 * 1000))) // 30 segundos atras
+        console.log(formataData(new Date(new Date - 5 * 60 * 1000))) // 5 minutos atrás
+        console.log(formataData(new Date(1960, 6, 30, 15, 30)))
+
+    function formataData(data){
+        let agora = new Date()
+        let diferenca = (agora - data);
+        console.log(diferenca);
+        if (diferenca < 1000) {
+            return ("agora")
+        }
+        if (diferenca < 1000 * 60) {
+            return (diferenca / 1000 + " segundos atrás")
+        }
+        if (diferenca < 1000 * 60 * 60) {
+            return (diferenca / 1000 / 60 + " minutos atrás")
+        }
+            return `${data.getDate()}.${data.getMonth()}.${(data.getFullYear() + "").substring(2, 4)} ${data.getHours()}:${data.getMinutes()}`
+    }
+</script>
