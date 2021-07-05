@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Pessoa{
+            constructor(nome, telefone) { 
+                this.nome = nome
+                this.telefone = telefone
+            }
+        }
+        class Agenda {
+            constructor() {
+                this.listaPessoas = []
+            }
+        armazenarPessoa(nome, telefone) { 
+            if (this.listaPessoas.length<= 10){
+            this.listaPessoas.push(new Pessoa(nome, telefone))
+            }   
+        }
+        listarPessoas() {
+            for (let pessoa of this.listaPessoas) {
+                console.log(`Nome: ${pessoa.nome}| Telefone: ${pessoa.telefone}`)
+            }
+        }
+        removerPessoa(nome) { 
+            for (let i=0, tamanhoVetorthis.listaPessoas.length; i < tamanhoVetor; i++)
+                    if (pessoa.nome === nome) {
+                        this.listaPessoas.splice(i, 1)
+                        break
+                    }
+                }                                 
+            }
+        buscarPessoa(nome){
+            for (let pessoa of this.listarPessoas){
+                if (pessoa.nome === nome){
+                    console.log(`Telefone ${pessoa.telefone}`)
+                    return
+                }
+            }
+            console.log("Nome não cadastrado!")
+        }
+    </script>
+</body>
+</html>
