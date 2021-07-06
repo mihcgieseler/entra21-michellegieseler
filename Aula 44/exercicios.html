@@ -7,43 +7,48 @@
 </head>
 <body>
     <script>
-        class Pessoa{
-            constructor(nome, telefone) { 
-                this.nome = nome
-                this.telefone = telefone
+        class Relogio {
+            constructor(formato) {
+                this.formato = formato
+            }
+
+            renderizar() {
+                let data = new Date()
+
+                let horas = data.getHours()
+                if (horas < 10) horas = "0" + horas
+
+                let minutos = data.getMinutes()
+                if (minutos < 10) minutos = "0" + minutos
+
+                let segundos = data.getSeconds()
+                if (segundos < 10) segundos = "0" + segundos
+
+                let resultado = this.formato
+                    .replace("h", horas)
+                    .replace("m", minutos)
+                    .replace("s", segundos)
+                
+                console.log(resultado)
+            }
+
+            parar() {
+                clearInterval(this.timer)
+            }
+
+            comecar() {
+                this.renderizar()
+                this.timer = setInterval(() => this.renderizar(), 1000)
             }
         }
-        class Agenda {
-            constructor() {
-                this.listaPessoas = []
-            }
-        armazenarPessoa(nome, telefone) { 
-            if (this.listaPessoas.length<= 10){
-            this.listaPessoas.push(new Pessoa(nome, telefone))
-            }   
-        }
-        listarPessoas() {
-            for (let pessoa of this.listaPessoas) {
-                console.log(`Nome: ${pessoa.nome}| Telefone: ${pessoa.telefone}`)
-            }
-        }
-        removerPessoa(nome) { 
-            for (let i=0, tamanhoVetorthis.listaPessoas.length; i < tamanhoVetor; i++)
-                    if (pessoa.nome === nome) {
-                        this.listaPessoas.splice(i, 1)
-                        break
-                    }
-                }                                 
-            }
-        buscarPessoa(nome){
-            for (let pessoa of this.listarPessoas){
-                if (pessoa.nome === nome){
-                    console.log(`Telefone ${pessoa.telefone}`)
-                    return
-                }
-            }
-            console.log("Nome não cadastrado!")
-        }
+
+        let timer1 = new Relogio("h:m:s")
+        timer1.comecar()
+
+        class miliSegundos extends Relogio {
+            constructor(formato, milisegundos)
+            super(formato)
+
     </script>
 </body>
 </html>

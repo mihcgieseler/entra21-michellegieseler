@@ -1,0 +1,63 @@
+Exercício 1- Herança-prototypal
+
+console.log(coelho.pula) = true
+
+delete coelho.pula
+        console.log(coelho.pula) = null
+
+delete animal.pula
+        console.log(coelho.pula) =  undefined
+    
+Exercício 2 
+    <script>
+        let cabeca = {
+            oculos: 1
+        }
+
+        let mesa = {
+            caneta: 3
+        }
+
+        let cama = {
+            lenco: 1,
+            travesseiro: 2
+        }
+
+        let bolso = {
+            dinheiro: 200
+        }
+
+        bolso.__proto__ = cama
+        cama.__proto__= mesa
+        mesa.__proto__= cabeca
+        console.log(bolso.caneta)
+        console.log(cama.oculos)
+        console.log(mesa.dinheiro)
+    </script>
+
+Exercício 3
+    <script>
+        let hamster = {
+            estomago:[],
+
+            comer(comida) {
+                this.estomago.push(comida)
+            }
+        }
+
+        let hamtaro = {
+            __proto__:hamster,
+            estomago:[]
+        }
+
+        let fofuxo = {
+            __proto__:hamster,
+            estomago:[]
+        }
+        
+        hamtaro.comer("Maçã")
+        console.log(hamtaro.estomago)
+        console.log(fofuxo.estomago)
+    </script>
+
+
