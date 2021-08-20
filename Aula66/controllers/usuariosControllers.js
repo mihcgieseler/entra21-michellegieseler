@@ -1,41 +1,64 @@
-const { Usuario } = require("../db/models");
-
-async function getUsuarios() {
-    const usuarios = await Usuario.findAll();
-
-    res.json(usuarios);
-};
-
-async function getUsuario(id) {
-    const usuario = await Usuario.findOne({
-        where: {
-            id: req.params.id
-        }
-    });
-
-    if (!usuario) {
-        return res.status(404).json({ message: "Usuário não foi encontrado!" });
+const usuariosServices = require("../services/usuariosServices");
+ 
+async function getAll(req, res, next) {
+    try {
+        const usuarios = await usuariosServices.getUsuarios();
+ 
+        res.json(usuarios);
+    } catch (err) {
+        console.log(err);
+        next(err);
     }
-
-    res.json(usuario);
 }
-
-async function createUsuario(usuario) {
-
+ 
+async function getOne(req, res, next) {
+    try {
+        const usuarios = await usuariosServices.getUsuario(req.params.id);
+ 
+        res.json(usuarios);
+    } catch (err) {
+        console.log(err);
+        next(err);
+    }
 }
-
-async function updateUsuario(usuarioAtualizado) {
-
+ 
+async function create(req, res, next) {
+    try {
+        const usuarios = await usuariosServices.createUsuario(req.body);
+ 
+        res.json(usuarios);
+    } catch (err) {
+        console.log(err);
+        next(err);
+    }
 }
-
-async function removeUsuario(id) {
-
+ 
+async function update(req, res, next) {
+    try {
+        const usuario = await usuariosServices.updateUsuarios(req.params.id, req.body);
+ 
+        res.json(usuario);
+    } catch (err) {
+        console.log(err);
+        next(err);
+    }
 }
-
+ 
+async function remove(req, res, next) {
+    try {
+        await usuariosServices.removeUsuario(req.params.id);
+ 
+        res.status(204).end();
+    } catch (err) {
+        console.log(err);
+        next(err);
+    }
+}
+ 
 module.exports = {
-    getUsuarios,
-    getUsuario,
-    createUsuario,
-    updateUsuario,
-    removeUsuario
+    getAll,
+    getOne,
+    create,
+    update,
+    remove
 }

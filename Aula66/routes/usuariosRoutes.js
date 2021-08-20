@@ -1,14 +1,14 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/:id", async (req, res) => {
-    try {
-        console.log(req.params);
-    } catch (error) {
-        console.log(error);
-        res.status(400).json({ message: "Ocorreu um erro" });
-    }
-});
+// Importando os controllers
+const usuariosControllers = require("../controllers/usuariosControllers");
+router.get("/", usuariosControllers.getAll);
+router.get("/:id", usuariosControllers.getOne);
+router.post("/", usuariosControllers.create);
+router.delete("/:id", usuariosControllers.remove);
+router.put("/:id", usuariosControllers.update);
+
 
 router.get("/", async (req, res) => {
     try {

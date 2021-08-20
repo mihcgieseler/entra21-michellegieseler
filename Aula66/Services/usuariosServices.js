@@ -1,64 +1,68 @@
-const usuariosServices = require("../services/usuariosServices");
+const { Usuario } = require("../db/models");
+const createError = require("http-errors");
 
-async function getAll(req, res, next) {
-    try {
-        const usuarios = await usuariosServices.getUsuarios();
+async function getUsuarios() {
+    const usuarios = await Usuario.findAll();
 
-        res.json(usuarios);
-    } catch (err) {
-        console.log(err);
-        next(err);
+    return usuarios;
+};
+
+async function getUsuario(id) {
+    const usuario = await Usuario.findOne({
+        where: {
+            id
+        }
+    });
+
+    if (!usuario) {
+        throw new createError(404, "Usuário não encontrado!");
     }
+
+    return usuario;
 }
 
-async function getOne() {
-    try {
-        const usuarios = await usuariosServices.getUsuarios();
+async function createUsuario(novoUsuario) {
+    const [usuario, criadoAgora] = await Usuario.findOrCreate({
+        where: { email: novoUsuario.email },
+        defaults: novoUsuario
+    });
 
-        res.json(usuarios);
-    } catch (err) {
-        console.log(err);
-        next(err);
-    }
+    if (!criadoAgora) throw new createError(409, "Usuário já está cadastrado!");
+
+    return usuario;
 }
 
-async function create() {
-    try {
-        const usuarios = await usuariosServices.getUsuarios();
+// async function updateUsuario(usuarioAtualizado) {
 
-        res.json(usuarios);
-    } catch (err) {
-        console.log(err);
-        next(err);
-    }
+// }
+
+async function removeUsuario(id) {
+    const usuario = await Usuario.findOne({
+        where: {
+            id
+        }
+    });
+
+    if (!usuario) throw new createError(404, "Usuário não existe!");
+
+    await usuario.destroy();
 }
+async function updateUsuario(id, usuarioAtualizado) {
+    const usuario = await Usuario.findOne({ where: { id } });
 
-async function update() {
-    try {
-        const usuarios = await usuariosServices.getUsuarios();
-
-        res.json(usuarios);
-    } catch (err) {
-        console.log(err);
-        next(err);
+    if (!usuario) {
+        throw new createError(404, "Usuário não existe!");
     }
-}
 
-async function remove() {
-    try {
-        const usuarios = await usuariosServices.getUsuarios();
-
-        res.json(usuarios);
-    } catch (err) {
-        console.log(err);
-        next(err);
-    }
+    Object.assign(usuario, usuarioAtualizado);
+    await usuario.save();
+    return usuario;
 }
 
 module.exports = {
-    getAll,
-    getOne,
-    create,
-    update,
-    remove
+    getUsuarios,
+    getUsuario,
+    createUsuario,
+    // updateUsuario,
+    removeUsuario
 }
