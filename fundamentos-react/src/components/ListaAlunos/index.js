@@ -11,7 +11,7 @@ export function ListaAlunos() {
       {
         alunos.map(aluno => {
           return (
-            <Aluno nome={aluno.nome} media={aluno.media}/>
+            <Aluno key={aluno.id} nome={aluno.nome} media={aluno.media}/>
           )
         })
       }
